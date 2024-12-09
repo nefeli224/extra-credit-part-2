@@ -1,0 +1,382 @@
+/*
+ Name: Nefeli Koumpouli  
+    File: styles.css
+    Date Created:  2024-10-17
+    Date Updated: 2024-10-20
+    Purpose: MIS 7375 CSS Extra Credit....
+    Version: 2.0
+    */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header Styling */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.medical {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.button1 {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button1:hover {
+  background-color: #0056b3;
+}
+
+/* Banner Styling */
+.center-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.center-banner #Welcome1 {
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.center-banner #Welcome2 {
+  font-size: 1rem;
+  color: #555555;
+  text-align: center;
+}
+
+.center-banner #Welcome2 a {
+  color: #007bff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.center-banner #Welcome2 a:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+/* New User Label Styling */
+#newUserLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#newUserLabel:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#newUserCheckbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #007bff;
+  cursor: pointer;
+}
+
+#newUserText {
+  font-size: 1rem;
+  color: #333333;
+}
+
+/* Button Styling */
+.button,
+.button1,
+.submit,
+.reset,
+.review {
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.submit {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.submit:hover {
+  background-color: #218838;
+}
+
+.reset {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.reset:hover {
+  background-color: #c82333;
+}
+
+.review {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.review:hover {
+  background-color: #e0a800;
+}
+
+/* Form and Container Styling */
+.form {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.required {
+  color: #d9534f;
+  font-size: 14px;
+}
+
+/* Footer Styling */
+.footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+}
+
+.footer-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: auto;
+}
+
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  padding: 20px;
+  width: 50%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-btn {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Disabled Button Styling */
+button:disabled,
+button[disabled] {
+  margin: 10px 5px;
+  padding: 10px 20px;
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-right {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .time {
+    text-align: center;
+    width: 100%;
+  }
+
+  .button1 {
+    align-self: center;
+  }
+
+  .footer {
+    padding: 10px 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+
+
+
+
+.switch-container {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between the switch and the text */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: lightgray;
+  border-radius: 20px;
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
+}
+
+.checkbox:checked + .switch::after {
+  left: 20px;
+}
+
+.checkbox:checked + .switch {
+  background-color: #7983ff;
+}
+
+.checkbox {
+  display: none;
+}
